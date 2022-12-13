@@ -18,5 +18,6 @@
         "titleBar.inactiveBackground": "#7f0c3899",
         "titleBar.inactiveForeground": "#e7e7e799"
     },
-    "peacock.color": "#7f0c38"
+    "peacock.color": "#7f0c38",
+    "explorer.fileNesting.enabled": false
 }
