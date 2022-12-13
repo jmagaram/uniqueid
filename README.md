@@ -1,7 +1,3 @@
-# ReScript Project Template
-
-The only official ReScript starter template.
-
 ## Installation
 
 ```sh
@@ -14,8 +10,8 @@ npm install
 - Clean: `npm run res:clean`
 - Build & watch: `npm run res:start`
 
-## Run
+## Run the test script
 
 ```sh
-node src/Demo.bs.js
+node src/Test.bs.js --harmony
 ```

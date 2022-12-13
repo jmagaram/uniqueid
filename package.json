@@ -1,6 +1,7 @@
 {
   "name": "rescript-project-template",
   "version": "0.0.1",
+  "type": "module",
   "scripts": {
     "res:build": "rescript",
     "res:clean": "rescript clean",
@@ -12,10 +13,12 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "rescript": "*"
+    "rescript": "*",
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
     "gentype": "^4.5.0",
-    "rescript": "^10.0.1"
+    "rescript": "^10.0.1",
+    "@types/uuid": "^9.0.0"
   }
 }

@@ -18,15 +18,13 @@ module Make: MakeType = () => {
   include Validated.Make({
     type error = uuidError
     type domain = string
-    let validate = (. s) => {
-      let s = s->Js.String2.trim
-      let len = s->Js.String2.length
-      switch len < 5 {
-      | true => Error(InvalidFormat)
-      | false => Ok(s)
+    let validate = (. s) =>
+      switch _validate(s) {
+      | true => Ok(s)
+      | false => Error(InvalidFormat)
       }
-    }
   })
 
-  let random = () => ("uuid:" ++ Js.Math.random()->Belt.Float.toString)->makeUnsafe
+  // let random = () => ("uuid:" ++ Js.Math.random()->Belt.Float.toString)->makeUnsafe
+  let random = () => _random()->makeUnsafe
 }
