@@ -12,6 +12,4 @@ export abstract class t { protected opaque!: any }; /* simulate opaque types */
 
 export const value: (_1:t) => string = PersonIdBS.value;
 
-export const random: () => t = PersonIdBS.random;
-
 export const _ignore: number = PersonIdBS._ignore;

@@ -7,6 +7,9 @@ module type T = {
   let makeUnsafe: domain => t
   let make: domain => result<t, error>
   let makeOpt: domain => option<t>
+
+  // Want to be able to work with these unique IDs from TypeScript
+  // though this demo project doesn't do that
   @genType
   let value: t => domain
 }

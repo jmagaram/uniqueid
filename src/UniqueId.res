@@ -2,7 +2,6 @@ type uuidError = InvalidFormat
 
 module type T = {
   include Validated.T
-  @genType
   let random: unit => t
 }
 
