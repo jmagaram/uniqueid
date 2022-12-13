@@ -9,7 +9,10 @@ var bobValue = Curry._1(PersonId.value, bobId);
 
 console.log("Bob's id is " + bobValue);
 
+var validId = "a47614ed-c26f-415f-91f4-c21c3bad370c";
+
 export {
+  validId ,
   bobId ,
   bobValue ,
 }

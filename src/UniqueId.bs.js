@@ -2,11 +2,10 @@
 
 import * as Curry from "../node_modules/rescript/lib/es6/curry.js";
 import * as Validated from "./Validated.bs.js";
-import * as UniqueIdGen from "./UniqueId.gen";
 
 function Make($star) {
   var validate = function (s) {
-    if (UniqueIdGen.validate(s)) {
+    if (s !== "") {
       return {
               TAG: /* Ok */0,
               _0: s
@@ -23,7 +22,7 @@ function Make($star) {
       });
   var makeUnsafe = include.makeUnsafe;
   var random = function (param) {
-    return Curry._1(makeUnsafe, UniqueIdGen.create());
+    return Curry._1(makeUnsafe, "uuid:" + String(Math.random()));
   };
   return {
           makeUnsafe: makeUnsafe,
@@ -37,4 +36,4 @@ function Make($star) {
 export {
   Make ,
 }
-/* ./UniqueId.gen Not a pure module */
+/* No side effect */
